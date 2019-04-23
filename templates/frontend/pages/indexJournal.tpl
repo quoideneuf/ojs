@@ -22,7 +22,7 @@
 
 	{call_hook name="Templates::Index::journal"}
 
-	{if $homepageImage->getOption('useHomepageImageAsHeaderBackground')}
+	{if $homepageImage && $homepageImage->getOption('useHomepageImageAsHeaderBackground')}
 		<div></div>
 	{else}
 		<div class="homepage_image">
