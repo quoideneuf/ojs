@@ -87,6 +87,17 @@ class DefaultThemePlugin extends ThemePlugin {
 		  	'default' => false,
 		]);
 
+		$this->addOption('useHomepageImageAsHeaderBackground', 'FieldOptions', [
+			'label' => __('plugins.themes.default.option.useHomepageImageAsHeaderBackground.label'),
+				'options' => [
+				[
+					'value' => true,
+			  		'label' => __('plugins.themes.default.option.useHomepageImageAsHeaderBackground.option'),
+				],
+		  	],
+		  	'default' => false,
+		]);
+
 		// Load primary stylesheet
 		$this->addStyle('stylesheet', 'styles/index.less');
 

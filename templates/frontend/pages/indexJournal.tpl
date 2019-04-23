@@ -22,7 +22,9 @@
 
 	{call_hook name="Templates::Index::journal"}
 
-	{if $homepageImage}
+	{if $homepageImage->getOption('useHomepageImageAsHeaderBackground')}
+		<div></div>
+	{else}
 		<div class="homepage_image">
 			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImage.altText|default:'null'}">
 		</div>
